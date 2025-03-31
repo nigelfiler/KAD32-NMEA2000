@@ -38,8 +38,8 @@ Temperature sender was calibrated using the Steinhart-Hart equation.
 Calibrated at 7c, 21c, 68c.
 
 ## Screenshots
-Here is my chart plotter receiving data from my sensors:  
-*(Add screenshots or photos here)*
+Here is my chart plotter receiving data from my sensors: [Chart Plotter](./Chartplotter.jpeg)
+
 
 ## Project Status
 
