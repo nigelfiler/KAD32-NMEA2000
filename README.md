@@ -39,7 +39,12 @@ Temperature sender was calibrated using the Steinhart-Hart equation. I have this
 Here is my chart plotter receiving data from my sensors:  
 *(Add screenshots or photos here)*
 
+## Project Status
+
+Project is working reliably for **Coolant Temerature** and **Engine Boost**, but the other functionality I wanted to add is not complete. This includes; Coolant Pressure, Voltage, RPM. 
+**RPM** had a design fault. The code is complete but untested. 
+**Coolant Pressure** should work but was not coded and I did not decide on a suitable location for the sensor.
+
 ## Future Enhancements
 - Support for additional engine parameters.
-- Improved board design for durability and reliability.
 - Refining the code for efficiency and accuracy.
