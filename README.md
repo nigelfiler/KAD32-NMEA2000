@@ -30,11 +30,11 @@ I'm not inventing anything new—many people have created similar solutions. My 
 
 Sensors used:
 
-**Boost pressure** Boost pressure is from a 0-30psi 0.5-4.5v sender, this will mount in the usual place on the Engine inlet manifold.
+**Boost pressure** uses a 0-30psi 0.5-4.5v pressure transducer, this is mounted in the Engine inlet manifold where there is a blanking plug.
 
-**Coolant Temperature** Uses a standard Engine temperature sender mounted in the thermostat housing. The KAD32 has a spare location for this. I used en earth insulated type.
+**Coolant Temperature** uses a standard Engine temperature sender mounted in the thermostat housing. The KAD32 has a spare location for this. I used an earth insulated type. M18x1.5
 
-Temperature sender was calibrated using the Steinhart-Hart equation. I have this sitting next to my water sender project on my desk and all 3 are reading the same. Calibrated at 7c, 21c, 68c.
+Temperature sender was calibrated using the Steinhart-Hart equation. I have this sitting next to my water sender project on my desk. Calibrated at 7c, 21c, 68c.
 
 ## Screenshots
 Here is my chart plotter receiving data from my sensors:  
