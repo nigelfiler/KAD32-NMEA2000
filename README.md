@@ -43,7 +43,7 @@ Here is my chart plotter receiving data from my sensors: [Chart Plotter](./Chart
 
 ## Project Status
 
-Project is working reliably for **Coolant Temerature** and **Engine Boost**, but the other functionality I wanted to add is not complete. This includes; Coolant Pressure, Voltage, RPM. 
+Project is working reliably for **Coolant Temperature** and **Engine Boost**, but the other functionality I wanted to add is not complete. This includes; Coolant Pressure, Voltage, RPM. 
 **RPM** had a design fault. The code is complete but untested. 
 **Coolant Pressure** should work but was not coded and I did not decide on a suitable location for the sensor.
 
