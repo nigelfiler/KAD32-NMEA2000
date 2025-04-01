@@ -42,9 +42,14 @@ Here is my chart plotter receiving data from my sensors: [Chart Plotter](./Chart
 
 ## Project Status
 
-Project is working reliably for more than 1 year for **Coolant Temperature** and **Engine Boost**, but the other functionality I wanted to add is not complete. This includes; Coolant Pressure, Voltage, RPM.
-**RPM** had a design fault. The code is complete but untested. 
-**Coolant Pressure** should work but was not coded and I did not decide on a suitable location for the sensor. Ideally a dual temperature and pressure sensor that mounts in the thermostat housing would be ideal, but I did not find a suitable one yet.
+Project is working reliably for more than 1 year for **Coolant Temperature** and **Engine Boost**, but the other functionality I wanted to add is not complete. 
+
+This includes; Coolant Pressure, Voltage, RPM.
+
+**RPM** had a design fault. The code is complete but untested.
+
+**Coolant Pressure** should work but was not coded and I did not decide on a suitable location for the sensor. 
+Ideally a dual temperature and pressure sensor that mounts in the thermostat housing would be ideal, but I did not find a suitable one yet.
 
 ## Future Enhancements
 - Support for additional engine parameters.
