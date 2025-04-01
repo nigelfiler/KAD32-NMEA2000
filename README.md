@@ -22,7 +22,7 @@ However, after further research, I expanded the design to include additional dat
     - This library provides the foundation for NMEA2000 data transmission, making it a great starting point for this project. I would like to thank Timo for creating his library and extensively documenting it. Without this I probably would not have succeeded.
 
 ## Implementation
-1. **Data Acquisition:** The Arduino Due collects engine data from the KAD32 sensors.
+1. **Data Acquisition:** The Arduino Due collects engine data from the sensors installed on the KAD32 Engine
 2. **NMEA2000 Transmission:** The data is formatted and sent over the N2K network via CAN bus.
 3. **Chart Plotter Display:** The chart plotter receives and displays the engine metrics in real time.
 
@@ -34,6 +34,7 @@ Sensors used:
 
 Temperature sender was calibrated using the Steinhart-Hart equation. 
 Calibrated on the bench at 7c, 21c, 68c.
+Code uses EMWA (Moving average filter) - this provides a stable temperature reading, without it the temperature reading was slighly erratic.
 
 ## Screenshots
 Here is my chart plotter receiving data from my sensors: [Chart Plotter](./Chartplotter.jpeg)
@@ -41,11 +42,12 @@ Here is my chart plotter receiving data from my sensors: [Chart Plotter](./Chart
 
 ## Project Status
 
-Project is working reliably for **Coolant Temperature** and **Engine Boost**, but the other functionality I wanted to add is not complete. This includes; Coolant Pressure, Voltage, RPM. 
+Project is working reliably for more than 1 year for **Coolant Temperature** and **Engine Boost**, but the other functionality I wanted to add is not complete. This includes; Coolant Pressure, Voltage, RPM.
 **RPM** had a design fault. The code is complete but untested. 
-**Coolant Pressure** should work but was not coded and I did not decide on a suitable location for the sensor.
+**Coolant Pressure** should work but was not coded and I did not decide on a suitable location for the sensor. Ideally a dual temperature and pressure sensor that mounts in the thermostat housing would be ideal, but I did not find a suitable one yet.
 
 ## Future Enhancements
 - Support for additional engine parameters.
 - Refining the code for efficiency and accuracy.
+- Remove blocking delay
 
