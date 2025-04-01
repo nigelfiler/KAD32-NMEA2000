@@ -12,8 +12,6 @@ However, after further research, I expanded the design to include additional dat
 - **Coolant Pressure**
 - **Alternator Voltage**
 
-## Why This Project?
-I'm not inventing anything new—many people have created similar solutions. My goal is to adapt existing technologies to meet my personal needs.
 
 ## Hardware and Libraries
 - **Microcontroller:** Arduino Due  
