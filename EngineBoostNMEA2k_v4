@@ -1,13 +1,6 @@
 // Uses NMEA2000 library from Timo Lappalainen
 // https://github.com/ttlappalainen 
 
-/***********************************************************************/ /**
-  \file   TemperatureMonitor.ino
-  \brief  NMEA2000 library example. Send main cabin and water temperatures to the bus.
-  \ingroup group_examples
-
-  Example does not yet fullfill all NMEA2000 requirements.
-*/
 
 #include <Arduino.h>
 #include <Wire.h>
@@ -15,7 +8,7 @@
 #include <SPI.h>
 #endif
 #include <U8g2lib.h>
-#include <NMEA2000_CAN.h>  // This will automatically choose right CAN library and create suitable NMEA2000 object
+#include <NMEA2000_CAN.h>  // This will automatically choose right CAN library and create suitable NMEA2000 object.
 #include <N2kMessages.h>
 #include <Ewma.h>
 
@@ -49,24 +42,22 @@ double starboardAlternatorVoltage = 0;
 int VoP;              // Integer value of voltage reading Port
 int VoS;              // Integer value of voltage reading Starboard
 
-//double R = 1000.0;   // Fixed resistance in the voltage divider
-double R = 220.0; // Changed to lower value to improve accuracy at higher temp. 220 is closer to the hot engine temp without using too low a resistance that will draw current and generate heat.
+double R = 220.0; // Changed from 1000 to 220 to improve accuracy at higher engine temp.
 double num = 0;
 
-
-// Volvo equivalent earth isolated
-//M18 x1.5
-//1c = 1795 Ohm
-//21c = 601 Ohm
-//75c = 83 Ohm
-//double c1 = 1.479761336E-03; //Steinhart-Hart Equation coefficients.
-//double c2 = 3.289077692E-04;
-//double c3 = -7.049734930E-07;
-// Volvo equivalent earth isolated
-
-
-
+// Volvo equivalent earth isolated temperature sender
+/*
+M18 x1.5
+1c = 1795 Ohm
+21c = 601 Ohm
+75c = 83 Ohm
 double c1 = 1.479761336E-03; //Steinhart-Hart Equation coefficients.
+double c2 = 3.289077692E-04;
+double c3 = -7.049734930E-07;
+*/ 
+
+
+double c1 = 1.479761336E-03;
 double c2 = 3.289077692E-04;
 double c3 = -7.049734930E-07;
 
@@ -211,7 +202,7 @@ double readStarboardTemp() {
   double roundedStarboardTemperature = roundToNearestCustom(starboardTemperature);
   Serial.print("Starboard: ");
   Serial.println(roundedStarboardTemperature-273.15);
-  return roundedStarboardTemperature;  // Value is in Kelvin and rounded to xx.15 or xx.65 to provide temerature in Centigrade on display in 1/2 degree values
+  return roundedStarboardTemperature;  // Value is in Kelvin and rounded to xx.15 or xx.65 to provide temperature in Centigrade on display in 1/2 degree values
 }
 
 void UpdateDisplay(double portPsiValue, double starboardPsiValue, double roundedPortTemperature, double roundedStarboardTemperature) {
@@ -225,7 +216,7 @@ void UpdateDisplay(double portPsiValue, double starboardPsiValue, double rounded
   u8g2.setCursor(5, 35);
   u8g2.print("Cur Temp: ");
   //u8g2.print(roundedPortTemperature-273.15);
-    u8g2.print(int(roundedPortTemperature-273.15));
+  u8g2.print(int(roundedPortTemperature-273.15));
   u8g2.print("c");
   u8g2.setCursor(5, 55);
   u8g2.print("Max Temp: ");
