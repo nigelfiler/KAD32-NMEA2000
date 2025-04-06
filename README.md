@@ -22,7 +22,7 @@ However, after further research, I expanded the design to include additional dat
     - This library provides the foundation for NMEA2000 data transmission, making it a great starting point for this project. I would like to thank Timo for creating his library and extensively documenting it.
 
 ## Implementation
-1. **Data Acquisition:** The Arduino Due collects engine data from the sensors installed on the KAD32 Engine
+1. **Data Acquisition:** The Arduino Due collects engine data from the sensors installed on both KAD32 Engines
 2. **NMEA2000 Transmission:** The data is formatted and sent over the N2K network via CAN bus.
 3. **Chart Plotter Display:** The chart plotter receives and displays the engine metrics in real time.
 
