@@ -15,11 +15,11 @@ However, after further research, I expanded the design to include additional dat
 
 ## Hardware and Libraries
 - **Microcontroller:** Arduino Due  
-    - Chosen for its **CAN bus support**, which is essential for NMEA2000 communication.
-    - Designed a PCB to connect the Arduino to the various sensors
+    - Chosen for its CAN bus support, which is required for NMEA2000 communication.
+    - Designed a PCB to connect the Arduino to the various sensors.
  
 - **Library:** [Timo Lappalainen's NMEA2000 library](https://github.com/ttlappalainen/NMEA2000)  
-    - This library provides the foundation for NMEA2000 data transmission, making it a great starting point for this project. I would like to thank Timo for creating his library and extensively documenting it. Without this I probably would not have succeeded.
+    - This library provides the foundation for NMEA2000 data transmission, making it a great starting point for this project. I would like to thank Timo for creating his library and extensively documenting it.
 
 ## Implementation
 1. **Data Acquisition:** The Arduino Due collects engine data from the sensors installed on the KAD32 Engine
@@ -30,11 +30,16 @@ Sensors used:
 
 **Boost Pressure** uses a 0-30psi (0.5-4.5v) pressure transducer, this is mounted in the engine inlet manifold where there is a blanking plug.
 
-**Coolant Temperature** uses a standard Engine temperature sender mounted in the thermostat housing. The KAD32 has a spare location for this. I used an earth insulated type. M18x1.5
+**Coolant Temperature** uses a standard Engine temperature sender mounted in the thermostat housing. The KAD32 has a spare location for this, formerly used for the overheat sender that is now in the exhaust manifold.
+I used an earth insulated type. M18x1.5 - There are now 2 senders in the housing, the orignal Volvo one for the temperature gauge and the new one for this project.
 
 Temperature sender was calibrated using the Steinhart-Hart equation. 
 Calibrated on the bench at 7c, 21c, 68c.
 Code uses EMWA (Moving average filter) - this provides a stable temperature reading, without it the temperature reading was slighly erratic.
+
+When cruising at 3100-3300 RPM the temerature is stable on both engines at 84.5c. 
+Running the engine at WOT both engine temperatures rose to 86c.
+This level of accuracy will help to show any early problems on the engines.
 
 ## Screenshots
 Here is my chart plotter receiving data from my sensors: [Chart Plotter](./Chartplotter.jpeg)
