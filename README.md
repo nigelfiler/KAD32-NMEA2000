@@ -37,8 +37,10 @@ Temperature sender was calibrated using the Steinhart-Hart equation.
 Calibrated on the bench at 7c, 21c, 68c.
 Code uses EMWA (Moving average filter) - this provides a stable temperature reading, without it the temperature reading was slighly erratic.
 
-When cruising at 3100-3300 RPM the temerature is stable on both engines at 84.5c. 
-Running the engine at WOT both engine temperatures rose to 86c.[Chart Plotter](./Chartplotter_86c.jpeg)
+When cruising at 3100-3300 RPM the temerature is stable on both engines at 84.5c.
+
+Running the engine at WOT both engine temperatures rose to 86c.[Picture](./Chartplotter_86c.jpeg)
+
 This level of accuracy will help to show any early problems on the engines.
 
 ## Screenshots
