@@ -44,7 +44,7 @@ Running the engine at WOT both engine temperatures rose to 86c [Picture](./Chart
 This level of accuracy will help to show any early problems on the engines.
 
 ## Screenshots
-Here is my chart plotter receiving data from my sensors: [Chart Plotter](./Chartplotter.jpeg)
+Here is my chart plotter receiving Boost and temperature data from my sensors: [Chart Plotter](./Chartplotter.jpeg)
 
 
 ## Project Status
