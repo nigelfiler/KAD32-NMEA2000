@@ -61,6 +61,5 @@ Ideally a dual temperature and pressure sensor that mounts in the thermostat hou
 
 ## Future Enhancements
 - Support for additional engine parameters.
-- Refining the code for efficiency and accuracy.
 - Remove blocking delay
 
