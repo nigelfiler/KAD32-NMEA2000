@@ -31,7 +31,7 @@ Sensors used:
 **Boost Pressure** uses a 0-30psi (0.5-4.5v) pressure transducer, this is mounted in the engine inlet manifold where there is a blanking plug.
 
 **Coolant Temperature** uses a standard Engine temperature sender mounted in the thermostat housing. The KAD32 has a spare location for this, formerly used for the overheat sender that is now in the exhaust manifold.
-I used an earth insulated type. M18x1.5 - There are now 2 senders in the housing, the orignal Volvo one for the temperature gauge and the new one for this project.
+I used an earth insulated type. M18x1.5 - There are now 2 senders in the housing, the original Volvo one for the temperature gauge and the new one for this project.
 
 Temperature sender was calibrated using the Steinhart-Hart equation. 
 Calibrated on the bench at 7c, 21c, 68c.
